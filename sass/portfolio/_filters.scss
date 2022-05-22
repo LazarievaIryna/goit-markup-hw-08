@@ -1,0 +1,40 @@
+.filters-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.filters-link {
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filter-btn {
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  color: var(--main-title-color);
+}
+.btn {
+  background-color: var(--team-bcg-color);
+  cursor: pointer;
+
+  transition: color 250ms $cubic-bezier, background-color 250ms $cubic-bezier;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--hero-title-color);
+  }
+}
+
+.btn-current {
+  background-color: var(--accent-color);
+  color: var(--hero-title-color);
+}
