@@ -142,13 +142,15 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="about section">
+      <section class="about section">
         <div class="container">
           <h2 class="about-title title">Чем мы занимаемся</h2>
           <ul class="about-img">
             <li class="about-list-img list">
               <div class="about-list-thumb">
                 <img
+                srcset="./images/box1-1x.jpg 1x, 
+                        ./images/box1-2x.jpg 2x"
                   src="./images/box1.jpg"
                   alt="Ноутбук"
                   width="370"
@@ -162,7 +164,9 @@
             <li class="about-list-img list">
               <div class="about-list-thumb">
                 <img
-                  src="./images/box2.jpg"
+                  srcset="./images/box2-1x.jpg 1x, 
+                        ./images/box2-2x.jpg 2x"
+                  src="./images/box2-1x.jpg"
                   alt="Смартфон"
                   width="370"
                   height="294"
@@ -175,7 +179,9 @@
             <li class="about-list-img list">
               <div class="about-list-thumb">
                 <img
-                  src="./images/box3.jpg"
+                  srcset="./images/box3-1x.jpg 1x, 
+                        ./images/box3-2x.jpg 2x"
+                  src="./images/box3-1x.jpg"
                   alt="Планшет"
                   width="370"
                   height="294"
@@ -187,19 +193,29 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- <section class="team section">
+      </section>
+      <section class="team section">
         <div class="container">
           <h2 class="team__title title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item list">
-              <img
+              <picture>
+                <source srcset="./images/teamcard1-desktop-1x.jpg 1x, 
+                  ./images/teamcard1-desktop-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/teamcard1-tablet-1x.jpg 1x, 
+                  ./images/teamcard1-tablet-2x.jpg 2x"
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/teamcard1-mobile-1x.jpg 1x, 
+                  ./images/teamcard1-mobile-2x.jpg 2x"
+                  media="(min-width:320px)"/>
+                <img
                 src="./images/teamcard1.jpg"
                 alt="Игорь Демьяненко"
-                width="270"
-                height="260"
                 class="team-img"
               />
+              </picture>
+              
               <div class="team-content">
                 <h3 class="team-content__member team-text-bottom">Игорь Демьяненко</h3>
                 <p class="team-content__position team-text-bottom">
@@ -235,13 +251,24 @@
               </div>
             </li>
             <li class="team__item list">
-              <img
+
+              <picture>
+                <source srcset="./images/teamcard2-desktop-1x.jpg 1x, 
+                  ./images/teamcard2-desktop-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/teamcard2-tablet-1x.jpg 1x, 
+                  ./images/teamcard2-tablet-2x.jpg 2x"
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/teamcard2-mobile-1x.jpg 1x, 
+                  ./images/teamcard2-mobile-2x.jpg 2x"
+                  media="(min-width:320px)"/>
+                <img
                 src="./images/teamcard2.jpg"
                 alt="Ольга Репина"
-                width="270"
-                height="260"
+                
                 class="team-img"
               />
+              </picture>
               <div class="team-content">
                 <h3 class="team-content__member team-text-bottom">Ольга Репина</h3>
                 <p class="team-content__position team-text-bottom">
@@ -277,13 +304,24 @@
               </div>
             </li>
             <li class="team__item list">
-              <img
+              <picture>
+                <source srcset="./images/teamcard3-desktop-1x.jpg 1x, 
+                  ./images/teamcard3-desktop-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/teamcard3-tablet-1x.jpg 1x, 
+                  ./images/teamcard3-tablet-2x.jpg 2x"
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/teamcard3-mobile-1x.jpg 1x, 
+                  ./images/teamcard3-mobile-2x.jpg 2x"
+                  media="(min-width:320px)"/>
+                  <img
                 src="./images/teamcard3.jpg"
                 alt="Николай Тарасов"
-                width="270"
-                height="260"
+                
                 class="team-img"
               />
+              </picture>
+              
 
               <div class="team-content">
                 <h3 class="team-content__member team-text-bottom">Николай Тарасов</h3>
@@ -320,13 +358,22 @@
               </div>
             </li>
             <li class="team__item list">
-              <img
+              <picture>
+                <source srcset="./images/teamcard4-desktop-1x.jpg 1x, 
+                  ./images/teamcard4-desktop-2x.jpg 2x"
+                  media="(min-width:1200px)"/>
+                  <source srcset="./images/teamcard4-tablet-1x.jpg 1x, 
+                  ./images/teamcard4-tablet-2x.jpg 2x"
+                  media="(min-width:768px)"/>
+                  <source srcset="./images/teamcard4-mobile-1x.jpg 1x, 
+                  ./images/teamcard4-mobile-2x.jpg 2x"
+                  media="(min-width:320px)"/>
+                <img
                 src="./images/teamcard4.jpg"
                 alt="Михаил Ермаков"
-                width="270"
-                height="260"
                 class="team-img"
               />
+              </picture>
               <div class="team-content">
                 <h3 class="team-content__member team-text-bottom">Михаил Ермаков</h3>
                 <p class="team-content__position team-text-bottom">
@@ -363,7 +410,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="section">
         <div class="container">
           <h2 class="team__title title">Постоянные клиенты</h2>

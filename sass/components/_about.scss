@@ -1,5 +1,10 @@
 .about.section {
   padding-top: 0;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
 .about-title {
   text-align: center;
