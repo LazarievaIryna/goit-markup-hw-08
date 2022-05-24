@@ -1,16 +1,38 @@
 .client-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  @include desktop {
+    flex-wrap: nowrap;
+  }
+}
+.client-item {
+  width: calc(50% - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  @include tablet {
+    width: calc(100% / 3 - 30px);
+  }
 }
 .client-link {
   display: flex;
-  height: 92px;
-  width: 170px;
+  max-height: 92px;
+  max-width: 210px;
+  padding: 16px 52px;
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(175, 177, 184, 1);
   border-radius: 4px;
   fill: rgba(175, 177, 184, 1);
-  padding: 16px 32px;
+  @include tablet {
+    max-width: 226px;
+    padding: 16px 60px;
+  }
+
+  @include desktop {
+    width: 170px;
+    padding: 16px 32px;
+  }
 
   transition: border-color 250ms $cubic-bezier, fill 250ms $cubic-bezier;
   &:hover,
@@ -19,6 +41,10 @@
     border-color: var(--accent-color);
   }
 }
-.client-item + .client-item {
-  margin-left: 30px;
+// .client-item + .client-item {
+//   margin-left: 30px;
+// }
+.client-icons {
+  min-width: 106px;
+  min-height: 60px;
 }

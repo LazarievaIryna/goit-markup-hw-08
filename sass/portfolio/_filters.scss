@@ -1,12 +1,30 @@
 .filters-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+
+  @include desktop {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 .filters-link {
   margin-right: 8px;
-  &:last-child {
-    margin-right: 0;
+  @include mobile {
+    &:nth-last-child(-n + 2) {
+      margin-top: 15px;
+    }
+  }
+  @include tablet {
+    &:nth-last-child(-n + 2) {
+      margin-top: 0;
+    }
+  }
+
+  @include desktop {
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
