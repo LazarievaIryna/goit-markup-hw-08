@@ -2,6 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 30px;
+  }
 
   @include desktop {
     justify-content: center;
@@ -10,15 +13,20 @@
 }
 .filters-link {
   margin-right: 8px;
+
   @include mobile {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
     &:nth-last-child(-n + 2) {
-      margin-top: 15px;
+      margin-bottom: 0;
     }
   }
   @include tablet {
-    &:nth-last-child(-n + 2) {
-      margin-top: 0;
-    }
+    // &:nth-last-child(-n + 2) {
+    //   margin-top: 0;
+    // }
+    margin-bottom: 0;
   }
 
   @include desktop {
