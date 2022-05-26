@@ -23,12 +23,19 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a href="/" class="logo header__logo  link"
           ><span lang="en" class="logo__text  logo__text--first-part ">Web</span
           ><span lang="en" class="logo__text  logo--black">Studio</span></a
         >
+        <div class="mobile-menu">
+          <button type="button">
+            <svg  width="40" height="40" class="menu-btn">
+                <use href="./images/icons.svg#icon-menu_40px"></use>
+              </svg>
+          </button>
+        </div>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item list">
@@ -74,7 +81,7 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="hero section-hero">
         <div class="container">
@@ -458,6 +465,7 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
+        <div class="tablet-flex">
         <section class="footer-address">
           <a href="/" class="logo footer-link link"
             ><span lang="en" class="logo__text logo__text--first-part">Web</span
@@ -519,6 +527,7 @@
             </li>
           </ul>
         </section> 
+        </div>
         <section class="subscribe">
           <div class="subscribe-footer">
             <p class="footer-title-text">Подпишитесь на рассылку</p>
@@ -626,5 +635,7 @@
      
      
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    
   </body>
 </html>
