@@ -22,12 +22,17 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header header-border">
       <div class="container">
         <a href="/" class="logo header__logo link"
           ><span lang="en" class="logo__text logo__text--first-part">Web</span
           ><span lang="en" class="logo__text logo--black">Studio</span></a
         >
+        <button type="button" class="menu-button-open">
+          <svg width="40" height="40" class="menu-btn">
+            <use href="./images/icons.svg#icon-menu_40px"></use>
+          </svg>
+        </button>
         <nav class="navigation">
           <ul class="navigation__list">
             <li class="navigation__item list">
@@ -49,7 +54,7 @@
         </nav>
 
         <ul class="contacts header__contacts">
-          <li class="list">
+          <li class="contacts-item list">
             <a
               class="contacts__link link header__text"
               href="mailto:info@devstudio.com"
@@ -60,7 +65,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="list">
+          <li class="contacts-item list">
             <a
               class="contacts__link link header__text"
               href="tel:+380961111111"
@@ -73,7 +78,68 @@
           </li>
         </ul>
       </div>
-    </header> -->
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <div class="mobile-menu-top">
+            <button type="button" class="menu-button-close">
+              <svg width="40" height="40" class="menu-btn">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+
+            <ul class="mobile__list">
+              <li class="mobile__item list">
+                <a href="" class="mobile__link link header__text current"
+                  >Студия</a
+                >
+              </li>
+              <li class="mobile__item list">
+                <a
+                  href="./portfolio.html"
+                  class="mobile__link link header__text"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile__item list">
+                <a href="" class="mobile__link link header__text">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu-bottom">
+            <ul>
+              <li class="mobile-tel__list list">
+                <a class="mobile-tel__link link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-mail__list list">
+                <a
+                  class="mobile-contacts__link link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-soc list">
+              <li class="mobile-soc__list">
+                <a href="" class="mobile-soc__link link">Instagram</a>
+              </li>
+              <li class="mobile-soc__list">
+                <a href="" class="mobile-soc__link link">Twitter</a>
+              </li>
+              <li class="mobile-soc__list">
+                <a href="" class="mobile-soc__link link">Facebook</a>
+              </li>
+              <li class="mobile-soc__list">
+                <a href="" class="mobile-soc__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
       <section class="section">
         <div class="container">
@@ -642,5 +708,6 @@
         </section>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

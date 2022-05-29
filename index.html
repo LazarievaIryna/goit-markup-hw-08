@@ -57,7 +57,7 @@
         </nav>
 
         <ul class="contacts header__contacts">
-          <li class="list">
+          <li class="contacts-item list">
             <a
               class="contacts__link link header__text"
               href="mailto:info@devstudio.com"
@@ -68,7 +68,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="list">
+          <li class="contacts-item list">
             <a
               class="contacts__link link header__text"
               href="tel:+380961111111"
@@ -81,8 +81,9 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-menu">
-        <div class="menu-container">
+      <div class="mobile-menu is-hidden">
+        <div class="container">
+          <div class="mobile-menu-top">
         <button type="button" class="menu-button-close">
             <svg  width="40" height="40" class="menu-btn">
                 <use href="./images/icons.svg#icon-close_40px"></use>
@@ -106,8 +107,8 @@
               <a href="" class="mobile__link link header__text">Контакты</a>
             </li>
           </ul>
-          
-          
+          </div>
+          <div class="mobile-menu-bottom">
           <ul>
             <li class="mobile-tel__list list">
               <a
@@ -134,8 +135,9 @@
             <li class="mobile-soc__list"> <a href="" class="mobile-soc__link link">Facebook</a> </li>
             <li class="mobile-soc__list"> <a href="" class="mobile-soc__link link">LinkedIn</a> </li>
           </ul>
-          
+          </div>
 
+      </div>
       </div>
     </header>
     <main>
@@ -680,8 +682,11 @@
             name="aggrement"
             value="aggrement"
             />
-            <span class="checkbox-icon-wrap"></span>          
-              Соглашаюсь с рассылкой и принимаю&#8201;<a href="" class="checkbox-link">Условия договора</a>
+            
+            <span class="checkbox-icon-wrap"></span>
+                  
+              Соглашаюсь с рассылкой и принимаю&#8201; <a href="" class="checkbox-link">Условия договора</a> 
+              
             </label>
           </div>
          

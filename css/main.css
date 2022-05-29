@@ -74,8 +74,15 @@ img {
   letter-spacing: 0.03em;
 }
 
-.header__logo {
-  margin-right: 93px;
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
 }
 
 .logo__text--first-part {
@@ -90,25 +97,36 @@ img {
   color: var(--hero-title-color);
 }
 
-.header {
-  background-color: var(--main-bcg-color);
-  border-bottom: 1px solid #ececec;
-}
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px 10px 15px;
 }
+@media screen and (min-width: 768px) {
+  .header .container {
+    padding: 0 15px 0 15px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header .container {
     display: flex;
-    align-items: center;
+    align-items: baseline;
   }
+}
+
+.header-border {
+  background-color: var(--main-bcg-color);
+  border-bottom: 1px solid #ececec;
 }
 
 .navigation {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: block;
+  }
 }
 
 .navigation__list,
@@ -125,6 +143,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header__text {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__text {
     font-size: 14px;
     line-height: 1.14;
   }
@@ -138,7 +162,17 @@ img {
 
 .header__contacts {
   display: none;
-  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .header__contacts {
+    display: block;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: flex;
+  }
 }
 
 .navigation__link {
@@ -180,18 +214,33 @@ img {
 
 .contacts__link {
   color: var(--main-text-color);
-  display: flex;
-  align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contacts__link:last-child {
-  margin-left: 30px;
+@media screen and (min-width: 768px) {
+  .contacts__link {
+    display: flex;
+    align-items: center;
+  }
 }
-.contacts__link:hover, .contacts__link:focus {
-  color: var(--accent-color);
+@media screen and (min-width: 1200px) {
+  .contacts__link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts__link:last-child {
+    margin-left: 30px;
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: var(--accent-color);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .menu-button-open {
+  margin-left: auto;
   display: inline-block;
   height: 40px;
   border: none;
@@ -202,6 +251,11 @@ img {
 .menu-button-open:focus, .menu-button-open:hover {
   fill: var(--accent-color);
 }
+@media screen and (min-width: 768px) {
+  .menu-button-open {
+    display: none;
+  }
+}
 
 .menu-button-close {
   display: inline-block;
@@ -211,17 +265,18 @@ img {
   padding: 0;
   background-color: transparent;
   display: block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-button-close:focus, .menu-button-close:hover {
+  fill: var(--accent-color);
 }
 
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  padding-left: 40px;
-  padding-right: 15px;
-  height: 100%;
+.mobile-menu-top {
+  width: 100%;
 }
 
 .mobile-menu {
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;
@@ -231,12 +286,16 @@ img {
   padding-top: 10px;
   padding-bottom: 48px;
 }
-
-.mobile__list {
-  margin-bottom: 306px;
+.mobile-menu .container {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.mobile__item:not(:last-child) {
+.mobile__item {
   margin-bottom: 32px;
 }
 
@@ -290,6 +349,10 @@ img {
 
 .mobile-soc__list + .mobile-soc__list {
   margin-left: 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .section {
@@ -994,6 +1057,7 @@ img {
 @media screen and (min-width: 768px) {
   .filters-list {
     margin-bottom: 30px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1006,6 +1070,9 @@ img {
 .filters-link {
   margin-right: 8px;
 }
+.filters-link:not(:last-child) {
+  margin-bottom: 15px;
+}
 @media screen and (min-width: 480px) {
   .filters-link:not(:last-child) {
     margin-bottom: 15px;
@@ -1015,7 +1082,7 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .filters-link {
+  .filters-link:nth-child(n+1) {
     margin-bottom: 0;
   }
 }
@@ -1166,8 +1233,8 @@ img {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: auto;
+  min-height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   position: absolute;
@@ -1178,6 +1245,18 @@ img {
   opacity: 1;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   transition: opacity 250ms ease-in, transform 250ms ease-in;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .btn-modal {
@@ -1221,10 +1300,16 @@ img {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--main-title-color);
   margin-bottom: 12px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .modal-label {
@@ -1297,6 +1382,12 @@ img {
   border-color: var(--accent-color);
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .user-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
 
 .checkbox-link {
   color: var(--accent-color);
@@ -1304,13 +1395,19 @@ img {
 
 .title-checkbox {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .title-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-icon-wrap {

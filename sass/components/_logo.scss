@@ -6,7 +6,12 @@
   letter-spacing: 0.03em;
 }
 .header__logo {
-  margin-right: 93px;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 .logo__text--first-part {
   color: var(--accent-color);

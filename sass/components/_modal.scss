@@ -10,8 +10,8 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: auto;
+  min-height: auto;
   background-color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   position: absolute;
@@ -24,6 +24,16 @@
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
   transition: opacity 250ms ease-in, transform 250ms ease-in;
+
+  @include mobile {
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 .btn-modal {
   position: absolute;
@@ -64,11 +74,16 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
 
   color: var(--main-title-color);
   margin-bottom: 12px;
+  text-align: center;
+
+  @include desktop {
+    line-height: 1.15;
+  }
 }
 .modal-label {
   font-weight: 400;
@@ -140,6 +155,12 @@
     border-color: var(--accent-color);
     cursor: pointer;
   }
+  @include desktop {
+    &::placeholder {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+  }
 }
 
 .checkbox-link {
@@ -147,14 +168,18 @@
 }
 .title-checkbox {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: var(--main-text-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-icon-wrap {
