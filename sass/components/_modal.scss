@@ -86,10 +86,10 @@
   }
 }
 .modal-label {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
+  font-weight: 400;
 
   color: var(--main-text-color);
 }
@@ -168,7 +168,7 @@
 }
 .title-checkbox {
   font-weight: 400;
-  font-size: 12px;
+
   line-height: 1.17;
   letter-spacing: 0.03em;
 
@@ -176,6 +176,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 320px) {
+    font-size: 3vw;
+  }
+  @media screen and (min-width: 321px) {
+    font-size: 12px;
+  }
+
+
   @include desktop {
     font-size: 14px;
     line-height: 1.71;
@@ -183,16 +191,26 @@
 }
 
 .checkbox-icon-wrap {
-  width: 16px;
-  height: 15px;
   border: 2px solid var(--header-logo-color);
-  margin-right: 9px;
   border-radius: 3px;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 3px;
 
+  @media screen and (max-width: 320px) {
+    width: 12px;
+    height: 11px;
+  }
+  @media screen and (min-width: 321px) {
+    width: 16px;
+    height: 12px;
+  }
+  @include mobile {
+    width: 16px;
+    height: 15px;
+    margin-right: 9px;
+  }
   .input-checkbox-hidden:focus + & {
     border-color: var(--accent-color);
   }
@@ -204,6 +222,7 @@
     border-color: var(--accent-color);
   }
 }
+
 .input-checkbox-hidden {
   transition: border-color 250ms $cubic-bezier;
 }
@@ -240,4 +259,15 @@
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.mobile-aggrement {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  text-align: center;
+}
+.checkbox-text {
+  display: flex;
 }
