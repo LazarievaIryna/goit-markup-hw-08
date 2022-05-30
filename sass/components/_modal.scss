@@ -10,8 +10,11 @@
 }
 
 .modal {
-  width: auto;
-  min-height: auto;
+  // width: auto;
+  // min-height: auto;
+  width: 90vw;
+  height: auto;
+
   background-color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   position: absolute;
@@ -182,7 +185,6 @@
   @media screen and (min-width: 321px) {
     font-size: 12px;
   }
-
 
   @include desktop {
     font-size: 14px;

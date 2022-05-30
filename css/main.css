@@ -330,6 +330,7 @@ img {
 
 .mobile-soc {
   display: flex;
+  margin-bottom: 48px;
 }
 
 .mobile-soc__link {
@@ -1238,8 +1239,8 @@ img {
 }
 
 .modal {
-  width: auto;
-  min-height: auto;
+  width: 90vw;
+  height: auto;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   position: absolute;

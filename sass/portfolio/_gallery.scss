@@ -3,9 +3,6 @@
   border-bottom: 1px solid $border-portfolio;
   border-left: 1px solid $border-portfolio;
   border-right: 1px solid $border-portfolio;
-  // @include tablet {
-  //   flex-grow: 1;
-  // }
 }
 .portfolio {
   background-color: var(--main-bcg-color);
@@ -35,9 +32,6 @@
     padding-bottom: 20px;
   }
 }
-// // .portfolio {
-
-// }
 
 .portfolio-padding {
   display: flex;
@@ -48,12 +42,8 @@
     flex-direction: row;
     margin-left: -30px;
   }
-
-  // @include desktop {
-  //   flex-wrap: wrap;
-  //   margin-left: -30px;
-  // }
 }
+
 .portfolio-title {
   margin-bottom: 4px;
   font-weight: 700;

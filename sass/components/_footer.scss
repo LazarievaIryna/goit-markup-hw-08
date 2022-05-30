@@ -1,7 +1,4 @@
-// .footer-container {
-//   display: flex;
-//   flex-direction: column;
-// }
+
 .footer-container {
   display: flex;
   flex-wrap: nowrap;
@@ -49,16 +46,7 @@
   }
 }
 
-// .footer-address {
-//   max-width: 231px;
-//   margin-right: 70px;
-// }
-// .address {
-//   text-align: center;
-// }
-// .footer-soc {
-//   display: flex;
-// }
+
 .address-list {
   margin-bottom: 60px;
   @include desktop {
@@ -132,11 +120,7 @@
   }
 }
 
-// .subscribe-footer {
-//   @include desktop {
-//     margin-left: 93px;
-//   }
-// }
+
 .subscribe {
   width: inherit;
 }
