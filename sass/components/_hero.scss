@@ -12,7 +12,8 @@
 
   @include mobile {
     max-width: 480px;
-    padding: 118px 60px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -24,7 +25,8 @@
 
   @include tablet {
     max-width: 768px;
-    padding: 118px 204px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -43,7 +45,8 @@
     }
   }
   @include desktop {
-    padding: 200px 452px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
@@ -85,6 +88,8 @@
   align-items: center;
 }
 .hero-title {
+  max-width: 360px;
+
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -96,14 +101,22 @@
   display: inline-block;
 
   margin-bottom: 30px;
+  // @include tablet {
+  //   max-width: 360px;
+  // }
+
   @include desktop {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 646px;
   }
 }
 .hero-btn {
   @media screen and (max-width: 480px) {
     margin-bottom: 10px;
+  }
+  @media screen and (min-width: 480px) {
+    margin-bottom: 0;
   }
 
   display: inline-block;

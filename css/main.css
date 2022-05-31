@@ -377,7 +377,8 @@ img {
 @media screen and (min-width: 480px) {
   .section-hero {
     max-width: 480px;
-    padding: 118px 60px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -386,7 +387,8 @@ img {
 @media screen and (min-width: 768px) {
   .section-hero {
     max-width: 768px;
-    padding: 118px 204px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-tablet.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -399,7 +401,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .section-hero {
-    padding: 200px 452px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -436,6 +439,7 @@ img {
 }
 
 .hero-title {
+  max-width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -450,6 +454,7 @@ img {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 646px;
   }
 }
 
@@ -472,6 +477,11 @@ img {
 @media screen and (max-width: 480px) {
   .hero-btn {
     margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero-btn {
+    margin-bottom: 0;
   }
 }
 .hero-btn:hover, .hero-btn:focus {
@@ -581,6 +591,11 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .advantages-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .advantages-list__item {
     width: calc(50% - 30px);
@@ -794,10 +809,25 @@ img {
   margin-left: 30px;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .client-item {
+    margin-bottom: 0;
+  }
+}
 @media screen and (min-width: 768px) {
   .client-item {
     width: calc(33.3333333333% - 30px);
   }
+}
+
+@media screen and (min-width: 768px) {
+  .client-tablet {
+    margin-bottom: 0;
+  }
+}
+
+.client-mobile {
+  margin-bottom: 0;
 }
 
 .client-link {
@@ -936,11 +966,11 @@ img {
   color: var(--hero-title-color);
 }
 
-.soc {
+.footer-soc-list {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .soc {
+  .footer-soc-list {
     margin-bottom: 0;
   }
 }
